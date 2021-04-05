@@ -86,7 +86,7 @@ func handleRequests() {
 	r.HandleFunc("/singlebook/{id}", returnSingleBook)
 	r.HandleFunc("/updateBook/{id}", updateBook).Methods("PUT")
 	r.HandleFunc("/deletebook/{id}", deleteBook).Methods("DELETE")
-	log.Fatal(http.ListenAndServe(":8050", r))
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
 
 func main() {
